@@ -1,5 +1,6 @@
 
 import "../components/List.css"
+import { Link } from "react-router-dom";
 
 function List(props) {
 
@@ -19,6 +20,7 @@ function List(props) {
                             )}
                         </div>
 
+                        <Link to={`/items/${recipeObj.id}`}>Details</Link>
                         <button onClick={() => props.deleteCallBack(recipeObj.id)}>Delete recipe</button>
                     </div>
                 );
