@@ -1,6 +1,6 @@
 
 import { Link, useParams } from "react-router-dom";
-
+import "../App.css"
 
 function ItemDetails({recipesList}) {
 
@@ -17,15 +17,15 @@ function ItemDetails({recipesList}) {
     }
 
     return (
-        <div>
+        <div className="details">
             <div>
                 <h2>{recipe.name}</h2>
-                <img src={recipe.image} alt={recipe.name} />
-                <p> Calories: {recipe.calories}</p>
-                <p> Servings: {recipe.servings}</p>
+                <img src={recipe.image} alt={recipe.name} className="details-image"/>
+                <p> <strong>Calories: </strong>{recipe.calories}</p>
+                <p> <strong>Servings: </strong>{recipe.servings}</p>
             </div>
             <div>
-                <Link to="/">Back</Link>
+                <Link to="/"> <button>Back</button></Link>
             </div>
         </div>
     );

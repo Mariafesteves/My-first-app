@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../App.css"
 
 function AddItems(props) {
     const [name, setName] = useState("");
@@ -33,7 +34,7 @@ function AddItems(props) {
             <h2>Create New Recipe</h2>
 
             <form onSubmit={handleSubmit}>
-                <label>
+                <label className="create">
                     Name:
                     <input
                         type="text"
@@ -45,7 +46,7 @@ function AddItems(props) {
                     />
                 </label>
 
-                <label>
+                <label className="create">
                     Calories:
                     <input
                         type="number"
@@ -59,7 +60,7 @@ function AddItems(props) {
                     />
                 </label>
 
-                <label>
+                <label className="create">
                     Servings:
                     <input
                         type="number"

@@ -1,42 +1,211 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F9F7F7;
+  color: #333;
+}
+
+
+.header {
+  padding: 1rem;
   text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.header input {
+  padding: 0.5rem;
+  width: 200px;
+  margin-right: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar {
+  background-color: #F9F7F7;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
 }
 
-.card {
-  padding: 2em;
+.nav-links a {
+  text-decoration: none;
+  color: #4a4a4a;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
 }
 
-.read-the-docs {
-  color: #888;
+.nav-links a:hover {
+  background-color: #E0E0E0;
 }
+
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+
+.recipe-card {
+  background-color:	#A0CED9;
+  margin: 10px;
+  padding: 1rem;
+  width:fit-content;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.recipe-card img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.recipe-content {
+   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.recipe-content h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.recipe-content span {
+  margin-left: 10px;
+  font-size: 0.95rem;
+}
+
+.recipe-details {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.recipe-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.healthy-badge {
+  background-color: #B5EAD7;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  margin: 10px;
+  
+}
+
+button, .details-btn {
+  background-color:  #CDB4DB;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.details{
+  background-color:	#A0CED9;
+  margin: 10px;
+  padding: 1rem;
+  width:fit-content;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  width: 98vw;
+}
+
+.details-image{
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.details-btn {
+  background-color: #CDB4DB;
+  color: white;
+}
+
+.details-btn:hover {
+  background-color: #CDB4DB;
+}
+
+.create{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 10px;
+  width: 100vw;
+}
+
+.about-us{
+  background-color:	#A0CED9;
+  margin: 10px;
+  padding: 1rem;
+  width:fit-content;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  width: 98vw;
+  
+
+}
+
+.footer {
+  background-color: #F9F7F7;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;  /* Center content horizontally */
+  border-top: 1px solid #ddd;
+  margin-top: 2rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+
+

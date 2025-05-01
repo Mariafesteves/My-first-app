@@ -1,27 +1,29 @@
 
-import "../components/List.css"
+import '../App.css';
 import { Link } from "react-router-dom";
 
 function List(props) {
 
     return (
-        <section>
+        <section className="recipe-list">
             {props.recipesList.map((recipeObj) => {
                 return (
-                    <div key={recipeObj.id} className="card">
+                    <div key={recipeObj.id} className="recipe-card">
                         <img src={recipeObj.image} alt={recipeObj.name} className="card-image"></img>
-                        <h3 className="card-info"><strong>{recipeObj.name}</strong></h3>
-                        <p className="card-info"> Calories: {recipeObj.calories}</p>
-                        <p className="card-info"> Servings: {recipeObj.servings}</p>
 
-                        <div className="label">
-                            {recipeObj.calories <= 300 && (
-                                <span className="healthy"> Healthy </span>
-                            )}
+                        <div className="recipe-content">
+                            <h2><strong>{recipeObj.name}</strong></h2>
                         </div>
 
-                        <Link to={`/items/${recipeObj.id}`}>Details</Link>
-                        <button onClick={() => props.deleteCallBack(recipeObj.id)}>Delete recipe</button>
+
+                        {recipeObj.calories <= 300 && (<div className="healthy-badge"> Healthy</div>
+                        )}
+
+                        <div className="recipe-buttons">
+
+                            <Link to={`/items/${recipeObj.id}`} className="details-btn">Details</Link>
+                            <button onClick={() => props.deleteCallBack(recipeObj.id)}>Delete recipe</button>
+                        </div>
                     </div>
                 );
             })}
