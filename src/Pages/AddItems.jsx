@@ -6,6 +6,7 @@ function AddItems(props) {
     const [name, setName] = useState("");
     const [calories, setCalories] = useState("");
     const [servings, setServings] = useState("");
+    const [image, setImage]= useState("")
 
     const navigate = useNavigate();
 
@@ -15,7 +16,8 @@ function AddItems(props) {
         const newItem = {
             name: name,
             calories: Number(calories), 
-            servings: Number(servings), 
+            servings: Number(servings),
+            image:image,
         };
 
         props.callbackToCreate(newItem);
@@ -24,6 +26,7 @@ function AddItems(props) {
         setName("");
         setCalories("");
         setServings("");
+        setImage("")
 
         
         navigate("/");
@@ -35,12 +38,12 @@ function AddItems(props) {
 
             <form onSubmit={handleSubmit}>
                 <label className="create">
-                    Name:
+                    Recipe's name:
                     <input
                         type="text"
                         required
                         name="name"
-                        placeholder="Recipe name"
+                        placeholder="Add name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
@@ -54,7 +57,7 @@ function AddItems(props) {
                         max={3000}
                         required
                         name="calories"
-                        placeholder="Recipe calories"
+                        placeholder="Add calories"
                         value={calories}
                         onChange={(e) => setCalories(e.target.value)}
                     />
@@ -67,8 +70,20 @@ function AddItems(props) {
                         min={1}
                         required
                         name="servings"
-                        placeholder="Recipe servings"
+                        placeholder="Add servings"
                         value={servings}
+                        onChange={(e) => setServings(e.target.value)}
+                    />
+                </label>
+                <label className="create">
+                    Image:
+                    <input
+                        type="number"
+                        min={1}
+                        required
+                        name="image"
+                        placeholder="Add image"
+                        value={image}
                         onChange={(e) => setServings(e.target.value)}
                     />
                 </label>
